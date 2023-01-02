@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body class="dark:bg-dark duration-500">
+    <!-- Main Navbar -->
+    <header class="relative container max-w-full bg-white dark:bg-secondary shadow-xl">
+        <!-- upper menu -->
+        <nav class="flex justify-end py-2 px-5 space-x-4 bg-primary dark:bg-dark">
+          <!-- theme mode switcher -->
+          <span class="flex flex-row space-x-2">
+            <i id="moon" class="fa-solid fa-moon text-xl text-white hover:cursor-pointer"></i>
+            <i id="sun" class="fa-solid fa-sun text-xl text-white hover:cursor-pointer"></i>
+          </span>
+          <!-- language dropdown -->
+          <!-- dropdown for languages -->
+          <div id="languages-dropdown" class="group/item hover:bg-white hover:text-dark dark:hover:text-white dark:hover:bg-info  dark:bg-dark overflow-hidden self-stretch flex items-center text-white">
+            <a href="#" class="text-xs px-2"><i class="fa-solid fa-language"></i> <span>Lang</span> <i class="fa-solid fa-angle-down text-sm"></i></a>
+            <div id="languages-dropdown-content" class="hidden group-hover/item:block  absolute z-10 shadow-lg bottom-2 bg-white text-secondary border-solid border-t-4 border-info max-w-fit"> 
+                <!-- languages -->
+            </div>
+    </div> 
+        </nav>
+        <!-- main menu -->
+        <nav class="flex flex-row justify-evenly items-stretch mx-5 xs:space-x-4">
+            <!-- responsive logo visible on all screens-->
+            <div>
+                <img  src="./img/Alkimma_primary_logo_transparent.png" class="hidden dark:block max-h-20 my-2" alt="Alkimma_primary_logo_transparent">
+                <img  src="./img/Alkimma_primary_logo_transparent_primary.png" class="dark:hidden max-h-20 my-2" alt="Alkimma_primary_logo_transparent">
+            </div>
+            <!-- lg and greater navigation menu -->
+                <!-- main navigation menu visible only on lg-->
+                    <div class="hidden lg:flex flex-row space-x-1 text-dark dark:text-white items-center font-bold uppercase xl:text-lg lg:text-md md:text-sm">  
+                        <!-- dropdown for brand -->
+                        <div id="brands-dropdown" class="group/item hover:bg-primary  dark:hover:bg-info  overflow-hidden self-stretch flex items-center ">
+                            <a href="#" class="hover:bg-primary dark:hover:bg-info group-hover/item:text-white self-stretch flex items-center p-4 space-x-1"><i class="fa-solid fa-ribbon "></i> <span>Brands</span> <i class="fa-solid fa-angle-down text-sm"></i></a>
+                            <div id="brands-dropdown-content" class="hidden group-hover/item:block  absolute z-10 top-32 mt-2 p-8 shadow-lg bg-white text-secondary border-solid border-t-4 border-primary dark:border-info w-full left-0"> 
+                              <div class="grid grid-cols-2 gap-20">
+                                <!-- brands -->
+                                <div class="grid grid-cols-3 h-min gap-10">
+                                    <div class="column">
+                                        <h3 class="flex flex-row items-center gap-2 hover:cursor-pointer"><img src="./img/hitachi-2.svg" alt="" width="60" height="50"> Hitachi</h3>
+                                      </div>
+                                      <div class="column">
+                                        <h3 class="flex flex-row items-center gap-2 hover:cursor-pointer"><img src="./img/cambridge.svg" alt="" width="60" height="50"> cambridge</h3>
+                                      </div>
+                                      <div class="column">
+                                        <h3 class="flex flex-row items-center gap-2 hover:cursor-pointer"><img src="./img/oxford.svg" alt="" width="60" height="50"> oxford</h3>
+                                      </div>
+                                      <div class="column">
+                                        <h3 class="flex flex-row items-center gap-2 hover:cursor-pointer"><img src="./img/starboard-transparent.png" alt="" width="60" height="50"> Startboard</h3>
+                                      </div>  
+                                </div>
+                                  <!-- banners -->
+                                  <div class="grid grid-cols-2 gap-x-10">
+                                    <div class="column">
+                                        <img src="./img/banner_5.jpg" alt="" width="380" height="790">
+                                    </div>
+                                    <div class="column">
+                                        <img src="./img/banner_6.gif" alt="" width="380" height="790">
+                                    </div>
+                                  </div>
+                              </div>
+                            </div>
+                    </div> 
+                        <!-- dropdown for categories -->
+                        <div id="categories-dropdown" class="group/item hover:bg-primary dark:hover:bg-info  overflow-hidden self-stretch flex items-center ">
+                                <a href="#" class="group-hover/item:bg-primary dark:group-hover/item:bg-info group-hover/item:text-white p-4"><i class="fa-solid fa-qrcode "></i> <span>categories</span> <i class="fa-solid fa-angle-down text-sm"></i></a>
+                                <div id="categories-dropdown-content" class="hidden group-hover/item:block  absolute z-10 top-32 mt-2 p-8 shadow-lg bg-white text-secondary border-solid border-t-4 border-primary dark:border-info w-full left-0"> 
+                                  <div class="grid grid-cols-2 gap-20">
+                                    <!-- categories -->
+                                    <div class="grid grid-cols-3 col-auto gap-10">
+                                        <div class="column">
+                                            <h3>Category 1</h3>
+                                            <span class="text-light capitalize text-sm flex flex-col space-y-2">
+                                              <a href="#" class="hover:underline">Link 1</a>
+                                              <a href="#" class="hover:underline">Link 2</a>
+                                              <a href="#" class="hover:underline">Link 3</a>
+                                              <a href="#" class="hover:underline">Link 3</a>
+                                              <a href="#" class="hover:underline">Link 3</a>
+                                              <a href="#" class="hover:underline">Link 3</a>
+                                            </span>
+                                          </div>
+                                          <div class="column">
+                                            <h3>Category 2</h3>
+                                            <span class="text-light capitalize text-sm flex flex-col space-y-2">
+                                                <a href="#" class="hover:underline">Link 1</a>
+                                                <a href="#" class="hover:underline">Link 2</a>
+                                                <a href="#" class="hover:underline">Link 3</a>
+                                                <a href="#" class="hover:underline">Link 3</a>
+                                                <a href="#" class="hover:underline">Link 3</a>
+                                                <a href="#" class="hover:underline">Link 3</a>
+                                                <a href="#" class="hover:underline">Link 3</a>
+                                            </span>
+                                          </div>
+                                          <div class="column">
+                                            <h3>Category 3</h3>
+                                            <span class="text-light capitalize text-sm flex flex-col space-y-2">
+                                                <a href="#" class="hover:underline">Link 3</a>
+                                                <a href="#" class="hover:underline">Link 3</a>
+                                                <a href="#" class="hover:underline">Link 3</a>
+                                            </span>
+                                          </div>
+                                          <div class="column">
+                                            <h3>Category 4</h3>
+                                            <span class="text-light capitalize text-sm flex flex-col space-y-2">
+                                                <a href="#" class="hover:underline">Link 3</a>
+                                                <a href="#" class="hover:underline">Link 3</a>
+                                                <a href="#" class="hover:underline">Link 3</a>
+                                                <a href="#" class="hover:underline">Link 3</a>
+                                            </span>
+                                          </div>
+                                          <div class="column">
+                                            <h3>Category 5</h3>
+                                            <span class="text-light capitalize text-sm flex flex-col space-y-2">
+                                                <a href="#" class="hover:underline">Link 3</a>
+                                                <a href="#" class="hover:underline">Link 3</a>
+                                                <a href="#" class="hover:underline">Link 3</a>
+                                                <a href="#" class="hover:underline">Link 3</a>
+                                                <a href="#" class="hover:underline">Link 3</a>
+                                            </span>
+                                          </div>
+                                          <div class="column">
+                                            <h3>Category 6</h3>
+                                            <span class="text-light capitalize text-sm flex flex-col space-y-2">
+                                                <a href="#" class="hover:underline">Link 3</a>
+                                                <a href="#" class="hover:underline">Link 3</a>
+                                                <a href="#" class="hover:underline">Link 3</a>
+                                                <a href="#" class="hover:underline">Link 3</a>
+                                                <a href="#" class="hover:underline">Link 3</a>
+                                            </span>
+                                          </div>
+                                    </div>
+                                      <!-- banners -->
+                                      <div class="grid grid-cols-2">
+                                        <div class="column">
+                                            <img src="./img/banner_1.jpg" alt="" width="380" height="790">
+                                        </div>
+                                        <div class="column">
+                                            <img src="./img/banner_3.jpg" alt="" width="380" height="790">
+                                        </div>
+                                      </div>
+                                  </div>
+                                </div>
+                        </div> 
+                        <a href="#" class="hover:bg-primary  dark:hover:bg-info hover:text-white  self-stretch flex items-center p-4 space-x-1"><i class="fa-solid fa-bolt "></i> <span>Top Sales</span></a>
+                        <a href="#" class="hover:bg-primary  dark:hover:bg-info  hover:text-white self-stretch flex items-center p-4 space-x-1"><i class="fa-solid fa-tags "></i> <span>Deals</span></a>
+                    </div>
+                <!-- right navigation menu visible only on lg-->
+                    <div class="hidden lg:flex flex-row space-x-6 text-primary dark:text-white items-center xl:text-lg lg:text-md md:text-sm">
+                        <a href="" class="flex flex-col items-center"><i class="fa-regular fa-user"></i> Sign In</a>
+                        <a href="" class="flex flex-col items-center"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
+                        <span class="relative">
+                          <a href="" class="flex flex-col items-center"><i class="fa-solid fa-cart-shopping"></i> Cart <span class="absolute bg-danger text-white px-1 -top-3 right-0 text-sm rounded-full">4</span></a>
+                        </span>
+                    </div>
+            <!-- md and smaller navigation menu -->
+                <!-- mobile navigation menu visible only on md,sm,xs -->
+                  <div class="lg:hidden xs:flex flex-row space-x-0 text-primary dark:text-white items-center md:text-4xl sm:text-3xl xs:text-2xl font-bold">
+                      <a href="" class="flex flex-col items-center border border-primary dark:border-white p-2"><i class="fa-regular fa-user"></i></a>
+                      <a href="" class="flex flex-col items-center border border-primary dark:border-white p-2"><i class="fa-solid fa-magnifying-glass"></i></a>
+                      <span class="relative"><a href="" class="flex flex-col items-center border border-primary dark:border-white p-2"><i class="fa-solid fa-cart-shopping"></i> <span class="absolute bg-danger text-white px-1 -top-3 right-0 text-sm rounded-full">4</span></a></span>
+                      <!-- hamburger icon to trigger the overlay mobile menu -->
+                      <a href="javascript:void(0)" id="burger-icon" class="flex flex-col items-center border border-primary dark:border-white p-2 z-auto"><i class="fa-solid fa-bars"></i></a>
+                  </div>
+            
+        </nav>
+        <!-- mobile overlay menu visible only on md,sm,xs (hidden by default, visible when burger icon clicked)-->
+        <nav id="overlay-menu" class="xs:flex opacity-0 lg:hidden w-0 h-0 fixed top-0 bottom-0 left-0 right-0 m-0 z-50 justify-center items-center bg-dark duration-700">
+            <!-- close icon -->
+          <a href="javascript:void(0)"
+                class="absolute top-6 right-8 text-white hover:text-amber-500 text-7xl font-semibold duration-300 z-10"
+                id="close-burger-menu">&times;</a>
+            <!-- drop down menu-->
+            <div id="mobile-menu" class="hidden flex-col text-white text-center items-center text-2xl font-bold space-y-6">
+                <!-- drop down content-->
+                <div class="flex flex-col space-y-2">
+                  <a href="#" id="menu-item"><i class="fa-solid fa-ribbon "></i> <span>Brands</span>  <i class="fa-solid fa-angle-down text-sm"></i></a>
+                  <div id="drop-down-content" class="hidden bg-dark text-lg font-light">
+                    <span class="flex flex-col items-center justify-start border border-solid border-1 border-white">
+                      <a href="" class="self-stretch border-b border-solid border-1 border-white p-3">Hitachi</a>
+                      <a href="" class="self-stretch border-b border-solid border-1 border-white p-3">Cambridge</a>
+                      <a href="" class="self-stretch border-b border-solid border-1 border-white p-3">StartBoard</a>
+                      <a href="" class="self-stretch border-b border-solid border-1 border-white p-3">Oxford</a>
+                    </span>
+                  </div>
+                </div>
+                <a href="#" class=""><i class="fa-solid fa-qrcode "></i> <span>categories</span></a>
+                <a href="#" class=""><i class="fa-solid fa-bolt "></i> <span>Top Sales</span></a>
+                <a href="#" class=""><i class="fa-solid fa-tags "></i> <span>Deals</span></a>
+                <!-- social accounts -->
+                <div class="flex flex-row border-solid border border-white">
+                  <span class="self-stretch border-solid border-r border-1 border-white p-2"><i class="fa-brands fa-facebook-f"></i></span>
+                  <span class="self-stretch border-solid border-r border-1 border-white p-2"><i class="fa-brands fa-linkedin-in"></i></span>
+                  <span class="self-stretch p-2"><i class="fa-brands fa-instagram"></i></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- body content -->
+    <div class="lg:w-4/5 xs:w-full mx-auto mt-5">
+      <!-- banners section -->
+        <div class="flex justify-center items-center">
+          <div class="grid md:grid-cols-3 xs:grid-cols-2 gap-3 p-2">
+              <!-- banner with two col -->
+              <div class="lg:col-span-2 xs:col-span-3">
+                <div class="relative w-full h-full">
+                  <!-- banner image -->
+                  <figure class="w-full h-full">
+                    <img src="./img/banner_7.jpg" alt="" class="object-cover w-full h-full">
+                  </figure> 
+                  <!-- image text -->
+                  <div class="absolute text-white font-bold lg:bottom-5 xs:bottom-0 right-0">
+                      <div class="flex flex-col justify-items-center items-center lg:space-y-10 md:xs:space-y-2 xs:space-y-0 mr-5">
+                        <div class="flex flex-col items-end lg:space-y-2 xs:space-y-1"> 
+                          <div class="bg-info p-2 text-sm grow-0 max-w-fit">50% OFF</div>
+                          <h2 class="md:text-3xl xs:text-lg">Full Item Name</h2>
+                          <span class="flex flex-row space-x-2 items-center"><i class="line-through text-light">29 LYD</i><i class="md:text-xl xs:text-lg">20 LYD</i></span>
+                        </div>
+                        <button class="bg-black max-w-fit p-3 hover:bg-info duration-500 shadow-xl">Shop now</button>
+                      </div>
+                  </div>  
+                </div>
+              </div>
+              <!-- two banners with one row for each -->
+              <div class="grid lg:grid-rows-2  gap-3 lg:col-span-1 md:col-span-3 xs:col-span-2">
+                <div class="xs:col-span-2">
+                  <div class="relative w-full h-full">
+                    <!-- banner image -->
+                    <figure class="w-full h-full">
+                      <img src="./img/banner_8.jpg" alt="" class="object-cover w-full h-full">
+                    </figure> 
+                    <!-- image text -->
+                    <div class="absolute text-white bg-secondary font-bold lg:bottom-5 xs:bottom-0 right-0 p-3 bg-opacity-70">
+                        <div class="flex flex-col justify-items-center items-center lg:space-y-10 md:xs:space-y-2 xs:space-y-0 mr-5 opacity-100">
+                          <div class="flex flex-col items-start space-y-0"> 
+                            <div class="text-accent-light p-2 text-sm grow-0 max-w-fit">Big Sales On</div>
+                            <h2 class="md:text-xl xs:text-lg">Category Name</h2>
+                          </div>
+                          <button class="bg-black max-w-fit p-3 hover:bg-danger duration-500 shadow-xl self-end text-sm">Shop now</button>
+                        </div>
+                    </div>  
+                  </div>
+                </div>
+                <div class="xs:col-span-2">
+                  <div class="relative w-full h-full">
+                    <!-- banner image -->
+                    <figure class="w-full h-full">
+                      <img src="./img/banner_9.jpg" alt="" class="object-cover w-full h-full">
+                    </figure> 
+                    <!-- image text -->
+                    <div class="absolute text-white font-bold lg:bottom-5 xs:bottom-0 left-0">
+                        <div class="flex flex-col justify-start items-start lg:space-y-8 md:xs:space-y-2 xs:space-y-0 ml-5">
+                          <div class="flex flex-col items-start space-y-0"> 
+                            <div class="bg-danger p-2 text-xs grow-0 max-w-fit">50% ON</div>
+                            <h2 class="md:text-2xl xs:text-lg">Category Name</h2>
+                          </div>
+                          <button class="bg-black max-w-fit p-3 hover:bg-danger duration-500 shadow-xl text-sm">Shop now</button>
+                        </div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <!-- hero section -->
+        <div class="flex flex-nowrap max-w-fit justify-around lg:flex-row xs:flex-col lg:space-x-14 mx-auto items-start m-4 p-4">
+          <div class="flex flex-row space-x-4">
+            <!-- icon -->
+            <span class="text-lg text-info self-center"><i class="fa-solid fa-truck"></i></span>
+            <!-- text -->
+            <div class="flex flex-col space-y-0">
+              <h4 class="font-bold text-dark dark:text-white text-md">FREE SHIPPING & RETURN</h4>
+              <h4 class="text-light text-ms">Free shipping on all orders over 99 LYD </h4>
+            </div>
+          </div>
+          <!-- divder -->
+          <hr class="xs:hidden lg:block w-0.5 h-10 bg-black dark:bg-light text-light">
+          <div class="flex flex-row space-x-4">
+            <!-- icon -->
+            <span class="text-lg text-info self-center"><i class="fa-solid fa-hand-holding-dollar"></i></span>
+            <!-- text -->
+            <div class="flex flex-col space-y-0">
+              <h4 class="font-bold text-dark dark:text-white text-md">MONEY BACK GUARANTEE</h4>
+              <h4 class="text-light text-ms">100% money back guarantee</h4>
+            </div>
+          </div>
+          <!-- divder -->
+          <hr class="xs:hidden lg:block w-0.5 h-10 bg-black dark:bg-light text-light">
+          <div class="flex flex-row space-x-4">
+            <!-- icon -->
+            <span class="text-lg text-info self-center"><i class="fa-solid fa-clock-rotate-left"></i></span>
+            <!-- text -->
+            <div class="flex flex-col space-y-0">
+              <h4 class="font-bold text-dark dark:text-white text-md">ONLINE SUPPORT 24/7</h4>
+              <h4 class="text-light text-ms">Lorem ipsum dolor sit amet</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Product section -->
+        <section class=" m-4 p-4 flex flex-col space-y-4">
+          <!-- section title and link -->
+          <div class="flex md:flex-row xs:flex-col justify-between">
+            <h1 class="text-dark dark:text-white font-bold text-2xl">Featured Product and Offers</h1>
+            <span class="text-primary hover:text-danger capitalize duration-700 text-sm"><a href="">view all products</a> <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+          <!-- products grid -->
+          <div class="grid lg:grid-cols-4 xs:grid-cols-2 gap-5">
+            <!-- product 1 -->
+            <div class="group/item">
+              <!-- product image and buttons -->
+              <div class="relative group">
+                <figure>
+                  <img src="./img//books/book1.webp" alt="" width="800" height="800">
+                </figure>
+                <div class="absolute bottom-0 w-full">
+                  <button class="lg:hidden xs:block group-hover:block bg-dark dark:bg-info text-white w-full p-3 duration-500 opacity-70 hover:opacity-100">view</button>
+                </div>
+                <div class="absolute top-6 right-3 lg:hidden xs:block group-hover:block">
+                  <span class=" text-white p-3 bg-dark rounded-full dark:hover:bg-info hover:bg-white hover:text-dark dark:hover:text-white hover:cursor-pointer text-center duration-500 text-xs"><i class="fa-solid fa-cart-plus"></i></span>
+                </div>
+              </div>
+              <!-- product details (name, category, tags, etc...) -->
+              <div class="flex flex-col space-y-3 my-3 group-hover/item:shadow-xl duration-300 rounded group-hover/item:p-2">
+                <!-- category name -->
+                <span class="text-accent-light text-sm flex flex-row justify-between"><i class="hover:cursor-pointer">category</i><i class="fa-regular fa-share-from-square hover:cursor-pointer hover:text-dark dark:hover:text-white"></i></span>
+                <!-- product info (name, tags) -->
+                <div>
+                  <!-- product name -->
+                  <span class="text-dark dark:text-white text-lg font-extrabold">BOOK NAME 1</span>
+                  <!-- product tags -->
+                  <span class="flex flex-row justify-start text-dark dark:text-light text-xs space-x-1">
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 1</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 2</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 3</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 4</i>
+                  </span>
+                </div>
+                <!-- product price -->
+                <span class="flex flex-row space-x-2">
+                  <!-- old -->
+                  <i class="text-light self-center line-through text-sm">95 LYD</i>
+                  <!-- new price -->
+                  <i class="text-dark dark:text-white text-lg">60 LYD</i>
+                </span>
+              </div>
+            </div>
+            <!-- product 2 -->
+            <div>
+              <!-- product image and buttons -->
+              <div class="relative group">
+                <figure>
+                  <img src="./img//books/book2.webp" alt="" width="800" height="800">
+                </figure>
+                <div class="absolute bottom-0 w-full">
+                  <button class="lg:hidden xs:block group-hover:block bg-dark dark:bg-info text-white w-full p-3 duration-500 opacity-70 hover:opacity-100">view</button>
+                </div>
+                <div class="absolute top-6 right-3 lg:hidden xs:block group-hover:block">
+                  <span class=" text-white p-3 bg-dark rounded-full dark:hover:bg-info hover:bg-white hover:text-dark dark:hover:text-white hover:cursor-pointer text-center duration-500 text-xs"><i class="fa-solid fa-cart-plus"></i></span>
+                </div>
+              </div>
+              <!-- product details (name, category, tags, etc...) -->
+              <div class="flex flex-col space-y-3 my-3">
+                <!-- category name -->
+                <span class="text-accent-light text-sm flex flex-row justify-between"><i class="hover:cursor-pointer">category</i><i class="fa-regular fa-share-from-square hover:cursor-pointer hover:text-dark dark:hover:text-white"></i></span>
+                <!-- product info (name, tags) -->
+                <div>
+                  <!-- product name -->
+                  <span class="text-dark dark:text-white text-lg font-extrabold">BOOK NAME 1</span>
+                  <!-- product tags -->
+                  <span class="flex flex-row justify-start text-dark dark:text-light text-xs space-x-1">
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 1</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 2</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 3</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 4</i>
+                  </span>
+                </div>
+                <!-- product price -->
+                <span class="flex flex-row space-x-2">
+                  <!-- old -->
+                  <i class="text-light self-center line-through text-sm">95 LYD</i>
+                  <!-- new price -->
+                  <i class="text-dark dark:text-white text-lg">60 LYD</i>
+                </span>
+              </div>
+            </div>
+            <!-- product 3 -->
+            <div>
+              <!-- product image and buttons -->
+              <div class="relative group">
+                <figure>
+                  <img src="./img//books/book3.webp" alt="" width="800" height="800">
+                </figure>
+                <div class="absolute bottom-0 w-full">
+                  <button class="lg:hidden xs:block group-hover:block bg-dark dark:bg-info text-white w-full p-3 duration-500 opacity-70 hover:opacity-100">view</button>
+                </div>
+                <div class="absolute top-6 right-3 lg:hidden xs:block group-hover:block">
+                  <span class=" text-white p-3 bg-dark rounded-full dark:hover:bg-info hover:bg-white hover:text-dark dark:hover:text-white hover:cursor-pointer text-center duration-500 text-xs"><i class="fa-solid fa-cart-plus"></i></span>
+                </div>
+              </div>
+              <!-- product details (name, category, tags, etc...) -->
+              <div class="flex flex-col space-y-3 my-3">
+                <!-- category name -->
+                <span class="text-accent-light text-sm flex flex-row justify-between"><i class="hover:cursor-pointer">category</i><i class="fa-regular fa-share-from-square hover:cursor-pointer hover:text-dark dark:hover:text-white"></i></span>
+                <!-- product info (name, tags) -->
+                <div>
+                  <!-- product name -->
+                  <span class="text-dark dark:text-white text-lg font-extrabold">BOOK NAME 1</span>
+                  <!-- product tags -->
+                  <span class="flex flex-row justify-start text-dark dark:text-light text-xs space-x-1">
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 1</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 2</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 3</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 4</i>
+                  </span>
+                </div>
+                <!-- product price -->
+                <span class="flex flex-row space-x-2">
+                  <!-- old -->
+                  <i class="text-light self-center line-through text-sm">95 LYD</i>
+                  <!-- new price -->
+                  <i class="text-dark dark:text-white text-lg">60 LYD</i>
+                </span>
+              </div>
+            </div>
+            <!-- product 4 -->
+            <div>
+              <!-- product image and buttons -->
+              <div class="relative group">
+                <figure>
+                  <img src="./img//books/book4.webp" alt="" width="800" height="800">
+                </figure>
+                <div class="absolute bottom-0 w-full">
+                  <button class="lg:hidden xs:block group-hover:block bg-dark dark:bg-info text-white w-full p-3 duration-500 opacity-70 hover:opacity-100">view</button>
+                </div>
+                <div class="absolute top-6 right-3 lg:hidden xs:block group-hover:block">
+                  <span class=" text-white p-3 bg-dark rounded-full dark:hover:bg-info hover:bg-white hover:text-dark dark:hover:text-white hover:cursor-pointer text-center duration-500 text-xs"><i class="fa-solid fa-cart-plus"></i></span>
+                </div>
+              </div>
+              <!-- product details (name, category, tags, etc...) -->
+              <div class="flex flex-col space-y-3 my-3">
+                <!-- category name -->
+                <span class="text-accent-light text-sm flex flex-row justify-between"><i class="hover:cursor-pointer">category</i><i class="fa-regular fa-share-from-square hover:cursor-pointer hover:text-dark dark:hover:text-white"></i></span>
+                <!-- product info (name, tags) -->
+                <div>
+                  <!-- product name -->
+                  <span class="text-dark dark:text-white text-lg font-extrabold">BOOK NAME 1</span>
+                  <!-- product tags -->
+                  <span class="flex flex-row justify-start text-dark dark:text-light text-xs space-x-1">
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 1</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 2</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 3</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 4</i>
+                  </span>
+                </div>
+                <!-- product price -->
+                <span class="flex flex-row space-x-2">
+                  <!-- old -->
+                  <i class="text-light self-center line-through text-sm">95 LYD</i>
+                  <!-- new price -->
+                  <i class="text-dark dark:text-white text-lg">60 LYD</i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        
+        <!-- divider -->
+        <div class="h-4"></div>
+
+
+        <!-- recently added products -->
+        <section class=" m-4 p-4 flex flex-col space-y-4">
+          <!-- section title and link -->
+          <div class="flex md:flex-row xs:flex-col justify-between">
+            <h1 class="text-dark dark:text-white font-bold text-2xl">Recently released</h1>
+            <span class="text-primary hover:text-danger capitalize duration-700 text-sm"><a href="">view all products</a> <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+          <!-- products grid -->
+          <div class="grid lg:grid-cols-6 sm:grid-cols-4 xs:grid-cols-1 gap-x-3">
+            <!-- first col -->
+            <div class="grid lg:col-span-2 sm:col-span-2 dark:bg-secondary p-4 shadow-xl">
+              <!-- product 5 -->
+              <div>
+                <!-- product image and buttons -->
+                <div class="relative group">
+                  <figure>
+                    <img src="./img//books/book5.webp" alt="" width="800" height="800">
+                  </figure>
+                  <div class="absolute bottom-0 w-full">
+                    <button class="lg:hidden xs:block group-hover:block bg-dark dark:bg-info text-white w-full p-3 duration-500 opacity-70 hover:opacity-100">view</button>
+                  </div>
+                  <div class="absolute top-6 right-3 lg:hidden xs:block group-hover:block">
+                    <span class=" text-white p-3 bg-dark rounded-full dark:hover:bg-info hover:bg-white hover:text-dark dark:hover:text-white hover:cursor-pointer text-center duration-500 text-xs"><i class="fa-solid fa-cart-plus"></i></span>
+                  </div>
+                </div>
+                <!-- product details (name, category, tags, etc...) -->
+                <div class="flex flex-col space-y-3 my-3">
+                  <!-- category name -->
+                  <span class="text-accent-light text-sm flex flex-row justify-between"><i class="hover:cursor-pointer">category</i><i class="fa-regular fa-share-from-square hover:cursor-pointer hover:text-dark dark:hover:text-white"></i></span>
+                  <!-- product info (name, tags) -->
+                  <div>
+                    <!-- product name -->
+                    <span class="text-dark dark:text-white text-lg font-extrabold">BOOK NAME 1</span>
+                    <!-- product tags -->
+                    <span class="flex flex-row justify-start text-dark dark:text-light text-xs space-x-1">
+                    <i class="bg-accent-light dark:bg-white  p-1">tag 2</i>
+                    <i class="bg-accent-light dark:bg-white  p-1">tag 2</i>
+                    <i class="bg-accent-light dark:bg-white  p-1">tag 2</i>
+                    <i class="bg-accent-light dark:bg-white  p-1">tag 2</i>
+                    </span>
+                  </div>
+                  <!-- product price -->
+                  <span class="flex flex-row space-x-2">
+                    <!-- old -->
+                    <i class="text-light self-center line-through text-sm">95 LYD</i>
+                    <!-- new price -->
+                    <i class="text-dark dark:text-white text-lg">60 LYD</i>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- second col -->
+            <div class="grid lg:grid-cols-4 lg:col-span-4 sm:col-span-4 sm:grid-cols-2 xs:grid-cols-1 gap-x-4">
+            <!-- product 6 -->
+            <div>
+              <!-- product image and buttons -->
+              <div class="relative group">
+                <figure>
+                  <img src="./img//books/book6.webp" alt="" width="800" height="800">
+                </figure>
+                <div class="absolute bottom-0 w-full">
+                  <button class="lg:hidden xs:block group-hover:block bg-dark dark:bg-info text-white w-full p-3 duration-500 opacity-70 hover:opacity-100">view</button>
+                </div>
+                <div class="absolute top-6 right-3 lg:hidden xs:block group-hover:block">
+                  <span class=" text-white p-3 bg-dark rounded-full dark:hover:bg-info hover:bg-white hover:text-dark dark:hover:text-white hover:cursor-pointer text-center duration-500 text-xs"><i class="fa-solid fa-cart-plus"></i></span>
+                </div>
+              </div>
+              <!-- product details (name, category, tags, etc...) -->
+              <div class="flex flex-col space-y-3 my-3">
+                <!-- category name -->
+                <span class="text-accent-light text-sm flex flex-row justify-between"><i class="hover:cursor-pointer">category</i><i class="fa-regular fa-share-from-square hover:cursor-pointer hover:text-dark dark:hover:text-white"></i></span>
+                <!-- product info (name, tags) -->
+                <div>
+                  <!-- product name -->
+                  <span class="text-dark dark:text-white text-lg font-extrabold">BOOK NAME 1</span>
+                  <!-- product tags -->
+                  <span class="flex flex-row justify-start text-dark dark:text-light text-xs space-x-1">
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 1</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 2</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 3</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 4</i>
+                  </span>
+                </div>
+                <!-- product price -->
+                <span class="flex flex-row space-x-2">
+                  <!-- old -->
+                  <i class="text-light self-center line-through text-sm">95 LYD</i>
+                  <!-- new price -->
+                  <i class="text-dark dark:text-white text-lg">60 LYD</i>
+                </span>
+              </div>
+            </div>
+            <!-- product 7 -->
+            <div>
+              <!-- product image and buttons -->
+              <div class="relative group">
+                <figure>
+                  <img src="./img//books/book7.webp" alt="" width="800" height="800">
+                </figure>
+                <div class="absolute bottom-0 w-full">
+                  <button class="lg:hidden xs:block group-hover:block bg-dark dark:bg-info text-white w-full p-3 duration-500 opacity-70 hover:opacity-100">view</button>
+                </div>
+                <div class="absolute top-6 right-3 lg:hidden xs:block group-hover:block">
+                  <span class=" text-white p-3 bg-dark rounded-full dark:hover:bg-info hover:bg-white hover:text-dark dark:hover:text-white hover:cursor-pointer text-center duration-500 text-xs"><i class="fa-solid fa-cart-plus"></i></span>
+                </div>
+              </div>
+              <!-- product details (name, category, tags, etc...) -->
+              <div class="flex flex-col space-y-3 my-3">
+                <!-- category name -->
+                <span class="text-accent-light text-sm flex flex-row justify-between"><i class="hover:cursor-pointer">category</i><i class="fa-regular fa-share-from-square hover:cursor-pointer hover:text-dark dark:hover:text-white"></i></span>
+                <!-- product info (name, tags) -->
+                <div>
+                  <!-- product name -->
+                  <span class="text-dark dark:text-white text-lg font-extrabold">BOOK NAME 1</span>
+                  <!-- product tags -->
+                  <span class="flex flex-row justify-start text-dark dark:text-light text-xs space-x-1">
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 1</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 2</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 3</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 4</i>
+                  </span>
+                </div>
+                <!-- product price -->
+                <span class="flex flex-row space-x-2">
+                  <!-- old -->
+                  <i class="text-light self-center line-through text-sm">95 LYD</i>
+                  <!-- new price -->
+                  <i class="text-dark dark:text-white text-lg">60 LYD</i>
+                </span>
+              </div>
+            </div>
+            <!-- product 8 -->
+            <div>
+              <!-- product image and buttons -->
+              <div class="relative group">
+                <figure>
+                  <img src="./img//books/book8.webp" alt="" width="800" height="800">
+                </figure>
+                <div class="absolute bottom-0 w-full">
+                  <button class="lg:hidden xs:block group-hover:block bg-dark dark:bg-info text-white w-full p-3 duration-500 opacity-70 hover:opacity-100">view</button>
+                </div>
+                <div class="absolute top-6 right-3 lg:hidden xs:block group-hover:block">
+                  <span class=" text-white p-3 bg-dark rounded-full dark:hover:bg-info hover:bg-white hover:text-dark dark:hover:text-white hover:cursor-pointer text-center duration-500 text-xs"><i class="fa-solid fa-cart-plus"></i></span>
+                </div>
+              </div>
+              <!-- product details (name, category, tags, etc...) -->
+              <div class="flex flex-col space-y-3 my-3">
+                <!-- category name -->
+                <span class="text-accent-light text-sm flex flex-row justify-between"><i class="hover:cursor-pointer">category</i><i class="fa-regular fa-share-from-square hover:cursor-pointer hover:text-dark dark:hover:text-white"></i></span>
+                <!-- product info (name, tags) -->
+                <div>
+                  <!-- product name -->
+                  <span class="text-dark dark:text-white text-lg font-extrabold">BOOK NAME 1</span>
+                  <!-- product tags -->
+                  <span class="flex flex-row justify-start text-dark dark:text-light text-xs space-x-1">
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 1</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 2</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 3</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 4</i>
+                  </span>
+                </div>
+                <!-- product price -->
+                <span class="flex flex-row space-x-2">
+                  <!-- old -->
+                  <i class="text-light self-center line-through text-sm">95 LYD</i>
+                  <!-- new price -->
+                  <i class="text-dark dark:text-white text-lg">60 LYD</i>
+                </span>
+              </div>
+            </div>
+            <!-- product 9 -->
+            <div>
+              <!-- product image and buttons -->
+              <div class="relative group">
+                <figure>
+                  <img src="./img//books/book9.webp" alt="" width="800" height="800">
+                </figure>
+                <div class="absolute bottom-0 w-full">
+                  <button class="lg:hidden xs:block group-hover:block bg-dark dark:bg-info text-white w-full p-3 duration-500 opacity-70 hover:opacity-100">view</button>
+                </div>
+                <div class="absolute top-6 right-3 lg:hidden xs:block group-hover:block">
+                  <span class=" text-white p-3 bg-dark rounded-full dark:hover:bg-info hover:bg-white hover:text-dark dark:hover:text-white hover:cursor-pointer text-center duration-500 text-xs"><i class="fa-solid fa-cart-plus"></i></span>
+                </div>
+              </div>
+              <!-- product details (name, category, tags, etc...) -->
+              <div class="flex flex-col space-y-3 my-3">
+                <!-- category name -->
+                <span class="text-accent-light text-sm flex flex-row justify-between"><i class="hover:cursor-pointer">category</i><i class="fa-regular fa-share-from-square hover:cursor-pointer hover:text-dark dark:hover:text-white"></i></span>
+                <!-- product info (name, tags) -->
+                <div>
+                  <!-- product name -->
+                  <span class="text-dark dark:text-white text-lg font-extrabold">BOOK NAME 1</span>
+                  <!-- product tags -->
+                  <span class="flex flex-row justify-start text-dark dark:text-light text-xs space-x-1">
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 1</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 2</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 3</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 4</i>
+                  </span>
+                </div>
+                <!-- product price -->
+                <span class="flex flex-row space-x-2">
+                  <!-- old -->
+                  <i class="text-light self-center line-through text-sm">95 LYD</i>
+                  <!-- new price -->
+                  <i class="text-dark dark:text-white text-lg">60 LYD</i>
+                </span>
+              </div>
+            </div>
+            <!-- product 10 -->
+            <div>
+              <!-- product image and buttons -->
+              <div class="relative group">
+                <figure>
+                  <img src="./img//books/book10.webp" alt="" width="800" height="800">
+                </figure>
+                <div class="absolute bottom-0 w-full">
+                  <button class="lg:hidden xs:block group-hover:block bg-dark dark:bg-info text-white w-full p-3 duration-500 opacity-70 hover:opacity-100">view</button>
+                </div>
+                <div class="absolute top-6 right-3 lg:hidden xs:block group-hover:block">
+                  <span class=" text-white p-3 bg-dark rounded-full dark:hover:bg-info hover:bg-white hover:text-dark dark:hover:text-white hover:cursor-pointer text-center duration-500 text-xs"><i class="fa-solid fa-cart-plus"></i></span>
+                </div>
+              </div>
+              <!-- product details (name, category, tags, etc...) -->
+              <div class="flex flex-col space-y-3 my-3">
+                <!-- category name -->
+                <span class="text-accent-light text-sm flex flex-row justify-between"><i class="hover:cursor-pointer">category</i><i class="fa-regular fa-share-from-square hover:cursor-pointer hover:text-dark dark:hover:text-white"></i></span>
+                <!-- product info (name, tags) -->
+                <div>
+                  <!-- product name -->
+                  <span class="text-dark dark:text-white text-lg font-extrabold">BOOK NAME 1</span>
+                  <!-- product tags -->
+                  <span class="flex flex-row justify-start text-dark dark:text-light text-xs space-x-1">
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 1</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 2</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 3</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 4</i>
+                  </span>
+                </div>
+                <!-- product price -->
+                <span class="flex flex-row space-x-2">
+                  <!-- old -->
+                  <i class="text-light self-center line-through text-sm">95 LYD</i>
+                  <!-- new price -->
+                  <i class="text-dark dark:text-white text-lg">60 LYD</i>
+                </span>
+              </div>
+            </div>
+            <!-- product 11 -->
+            <div>
+              <!-- product image and buttons -->
+              <div class="relative group">
+                <figure>
+                  <img src="./img//books/book11.webp" alt="" width="800" height="800">
+                </figure>
+                <div class="absolute bottom-0 w-full">
+                  <button class="lg:hidden xs:block group-hover:block bg-dark dark:bg-info text-white w-full p-3 duration-500 opacity-70 hover:opacity-100">view</button>
+                </div>
+                <div class="absolute top-6 right-3 lg:hidden xs:block group-hover:block">
+                  <span class=" text-white p-3 bg-dark rounded-full dark:hover:bg-info hover:bg-white hover:text-dark dark:hover:text-white hover:cursor-pointer text-center duration-500 text-xs"><i class="fa-solid fa-cart-plus"></i></span>
+                </div>
+              </div>
+              <!-- product details (name, category, tags, etc...) -->
+              <div class="flex flex-col space-y-3 my-3">
+                <!-- category name -->
+                <span class="text-accent-light text-sm flex flex-row justify-between"><i class="hover:cursor-pointer">category</i><i class="fa-regular fa-share-from-square hover:cursor-pointer hover:text-dark dark:hover:text-white"></i></span>
+                <!-- product info (name, tags) -->
+                <div>
+                  <!-- product name -->
+                  <span class="text-dark dark:text-white text-lg font-extrabold">BOOK NAME 1</span>
+                  <!-- product tags -->
+                  <span class="flex flex-row justify-start text-dark dark:text-light text-xs space-x-1">
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 1</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 2</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 3</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 4</i>
+                  </span>
+                </div>
+                <!-- product price -->
+                <span class="flex flex-row space-x-2">
+                  <!-- old -->
+                  <i class="text-light self-center line-through text-sm">95 LYD</i>
+                  <!-- new price -->
+                  <i class="text-dark dark:text-white text-lg">60 LYD</i>
+                </span>
+              </div>
+            </div>
+            <!-- product 12 -->
+            <div>
+              <!-- product image and buttons -->
+              <div class="relative group">
+                <figure>
+                  <img src="./img//books/book12.webp" alt="" width="800" height="800">
+                </figure>
+                <div class="absolute bottom-0 w-full">
+                  <button class="lg:hidden xs:block group-hover:block bg-dark dark:bg-info text-white w-full p-3 duration-500 opacity-70 hover:opacity-100">view</button>
+                </div>
+                <div class="absolute top-6 right-3 lg:hidden xs:block group-hover:block">
+                  <span class=" text-white p-3 bg-dark rounded-full dark:hover:bg-info hover:bg-white hover:text-dark dark:hover:text-white hover:cursor-pointer text-center duration-500 text-xs"><i class="fa-solid fa-cart-plus"></i></span>
+                </div>
+              </div>
+              <!-- product details (name, category, tags, etc...) -->
+              <div class="flex flex-col space-y-3 my-3">
+                <!-- category name -->
+                <span class="text-accent-light text-sm flex flex-row justify-between"><i class="hover:cursor-pointer">category</i><i class="fa-regular fa-share-from-square hover:cursor-pointer hover:text-dark dark:hover:text-white"></i></span>
+                <!-- product info (name, tags) -->
+                <div>
+                  <!-- product name -->
+                  <span class="text-dark dark:text-white text-lg font-extrabold">BOOK NAME 1</span>
+                  <!-- product tags -->
+                  <span class="flex flex-row justify-start text-dark dark:text-light text-xs space-x-1">
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 1</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 2</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 3</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 4</i>
+                  </span>
+                </div>
+                <!-- product price -->
+                <span class="flex flex-row space-x-2">
+                  <!-- old -->
+                  <i class="text-light self-center line-through text-sm">95 LYD</i>
+                  <!-- new price -->
+                  <i class="text-dark dark:text-white text-lg">60 LYD</i>
+                </span>
+              </div>
+            </div>
+            <!-- product 13 -->
+            <div>
+              <!-- product image and buttons -->
+              <div class="relative group">
+                <figure>
+                  <img src="./img//books/book13.webp" alt="" width="800" height="800">
+                </figure>
+                <div class="absolute bottom-0 w-full">
+                  <button class="lg:hidden xs:block group-hover:block bg-dark dark:bg-info text-white w-full p-3 duration-500 opacity-70 hover:opacity-100">view</button>
+                </div>
+                <div class="absolute top-6 right-3 lg:hidden xs:block group-hover:block">
+                  <span class=" text-white p-3 bg-dark rounded-full dark:hover:bg-info hover:bg-white hover:text-dark dark:hover:text-white hover:cursor-pointer text-center duration-500 text-xs"><i class="fa-solid fa-cart-plus"></i></span>
+                </div>
+              </div>
+              <!-- product details (name, category, tags, etc...) -->
+              <div class="flex flex-col space-y-3 my-3">
+                <!-- category name -->
+                <span class="text-accent-light text-sm flex flex-row justify-between"><i class="hover:cursor-pointer">category</i><i class="fa-regular fa-share-from-square hover:cursor-pointer hover:text-dark dark:hover:text-white"></i></span>
+                <!-- product info (name, tags) -->
+                <div>
+                  <!-- product name -->
+                  <span class="text-dark dark:text-white text-lg font-extrabold">BOOK NAME 1</span>
+                  <!-- product tags -->
+                  <span class="flex flex-row justify-start text-dark dark:text-light text-xs space-x-1">
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 1</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 2</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 3</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 4</i>
+                  </span>
+                </div>
+                <!-- product price -->
+                <span class="flex flex-row space-x-2">
+                  <!-- old -->
+                  <i class="text-light self-center line-through text-sm">95 LYD</i>
+                  <!-- new price -->
+                  <i class="text-dark dark:text-white text-lg">60 LYD</i>
+                </span>
+              </div>
+            </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- divider -->
+        <div class="h-4"></div>
+
+
+        <!-- most popular products -->
+        <section class=" m-4 p-4 flex flex-col space-y-4">
+          <!-- section title and link -->
+          <div class="flex md:flex-row xs:flex-col justify-between">
+            <h1 class="text-dark dark:text-white font-bold text-2xl">Most Popular</h1>
+            <span class="text-primary hover:text-danger capitalize duration-700 text-sm"><a href="">view all products</a> <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+          <!-- products grid -->
+          <div class="grid lg:grid-cols-6 sm:grid-cols-4 xs:grid-cols-1 gap-x-3">
+            <!-- first col -->
+            <div class="grid lg:grid-cols-4 lg:col-span-4 sm:col-span-4 sm:grid-cols-2 xs:grid-cols-1 gap-x-4">
+            <!-- product 14 -->
+            <div>
+              <!-- product image and buttons -->
+              <div class="relative group">
+                <figure>
+                  <img src="./img/equips/equips1.webp" alt="" width="800" height="800">
+                </figure>
+                <div class="absolute bottom-0 w-full">
+                  <button class="lg:hidden xs:block group-hover:block bg-dark dark:bg-info text-white w-full p-3 duration-500 opacity-70 hover:opacity-100">view</button>
+                </div>
+                <div class="absolute top-6 right-3 lg:hidden xs:block group-hover:block">
+                  <span class=" text-white p-3 bg-dark rounded-full dark:hover:bg-info hover:bg-white hover:text-dark dark:hover:text-white hover:cursor-pointer text-center duration-500 text-xs"><i class="fa-solid fa-cart-plus"></i></span>
+                </div>
+              </div>
+              <!-- product details (name, category, tags, etc...) -->
+              <div class="flex flex-col space-y-3 my-3">
+                <!-- category name -->
+                <span class="text-accent-light text-sm flex flex-row justify-between"><i class="hover:cursor-pointer">category</i><i class="fa-regular fa-share-from-square hover:cursor-pointer hover:text-dark dark:hover:text-white"></i></span>
+                <!-- product info (name, tags) -->
+                <div>
+                  <!-- product name -->
+                  <span class="text-dark dark:text-white text-lg font-extrabold">BOOK NAME 1</span>
+                  <!-- product tags -->
+                  <span class="flex flex-row justify-start text-dark dark:text-light text-xs space-x-1">
+                    <i class="bg-accent-light dark:bg-white  p-1">tag 1</i>
+                    <i class="bg-accent-light dark:bg-white  p-1">tag 2</i>
+                  </span>
+                </div>
+                <!-- product price -->
+                <span class="flex flex-row space-x-2">
+                  <!-- old -->
+                  <i class="text-light self-center line-through text-sm">95 LYD</i>
+                  <!-- new price -->
+                  <i class="text-dark dark:text-white text-lg">60 LYD</i>
+                </span>
+              </div>
+            </div>
+            <!-- product 15 -->
+            <div>
+              <!-- product image and buttons -->
+              <div class="relative group">
+                <figure>
+                  <img src="./img/equips/equips2.webp" alt="" width="800" height="800">
+                </figure>
+                <div class="absolute bottom-0 w-full">
+                  <button class="lg:hidden xs:block group-hover:block bg-dark dark:bg-info text-white w-full p-3 duration-500 opacity-70 hover:opacity-100">view</button>
+                </div>
+                <div class="absolute top-6 right-3 lg:hidden xs:block group-hover:block">
+                  <span class=" text-white p-3 bg-dark rounded-full dark:hover:bg-info hover:bg-white hover:text-dark dark:hover:text-white hover:cursor-pointer text-center duration-500 text-xs"><i class="fa-solid fa-cart-plus"></i></span>
+                </div>
+              </div>
+              <!-- product details (name, category, tags, etc...) -->
+              <div class="flex flex-col space-y-3 my-3">
+                <!-- category name -->
+                <span class="text-accent-light text-sm flex flex-row justify-between"><i class="hover:cursor-pointer">category</i><i class="fa-regular fa-share-from-square hover:cursor-pointer hover:text-dark dark:hover:text-white"></i></span>
+                <!-- product info (name, tags) -->
+                <div>
+                  <!-- product name -->
+                  <span class="text-dark dark:text-white text-lg font-extrabold">BOOK NAME 1</span>
+                  <!-- product tags -->
+                  <span class="flex flex-row justify-start text-dark dark:text-light text-xs space-x-1">
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 1</i>
+                  </span>
+                </div>
+                <!-- product price -->
+                <span class="flex flex-row space-x-2">
+                  <!-- old -->
+                  <i class="text-light self-center line-through text-sm">95 LYD</i>
+                  <!-- new price -->
+                  <i class="text-dark dark:text-white text-lg">60 LYD</i>
+                </span>
+              </div>
+            </div>
+            <!-- product 16 -->
+            <div>
+              <!-- product image and buttons -->
+              <div class="relative group">
+                <figure>
+                  <img src="./img/equips/equips3.webp" alt="" width="800" height="800">
+                </figure>
+                <div class="absolute bottom-0 w-full">
+                  <button class="lg:hidden xs:block group-hover:block bg-dark dark:bg-info text-white w-full p-3 duration-500 opacity-70 hover:opacity-100">view</button>
+                </div>
+                <div class="absolute top-6 right-3 lg:hidden xs:block group-hover:block">
+                  <span class=" text-white p-3 bg-dark rounded-full dark:hover:bg-info hover:bg-white hover:text-dark dark:hover:text-white hover:cursor-pointer text-center duration-500 text-xs"><i class="fa-solid fa-cart-plus"></i></span>
+                </div>
+              </div>
+              <!-- product details (name, category, tags, etc...) -->
+              <div class="flex flex-col space-y-3 my-3">
+                <!-- category name -->
+                <span class="text-accent-light text-sm flex flex-row justify-between"><i class="hover:cursor-pointer">category</i><i class="fa-regular fa-share-from-square hover:cursor-pointer hover:text-dark dark:hover:text-white"></i></span>
+                <!-- product info (name, tags) -->
+                <div>
+                  <!-- product name -->
+                  <span class="text-dark dark:text-white text-lg font-extrabold">BOOK NAME 1</span>
+                  <!-- product tags -->
+                  <span class="flex flex-row justify-start text-dark dark:text-light text-xs space-x-1">
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 1</i>
+                  </span>
+                </div>
+                <!-- product price -->
+                <span class="flex flex-row space-x-2">
+                  <!-- old -->
+                  <i class="text-light self-center line-through text-sm">95 LYD</i>
+                  <!-- new price -->
+                  <i class="text-dark dark:text-white text-lg">60 LYD</i>
+                </span>
+              </div>
+            </div>
+            <!-- product 17 -->
+            <div>
+              <!-- product image and buttons -->
+              <div class="relative group">
+                <figure>
+                  <img src="./img/equips/equips4.webp" alt="" width="800" height="800">
+                </figure>
+                <div class="absolute bottom-0 w-full">
+                  <button class="lg:hidden xs:block group-hover:block bg-dark dark:bg-info text-white w-full p-3 duration-500 opacity-70 hover:opacity-100">view</button>
+                </div>
+                <div class="absolute top-6 right-3 lg:hidden xs:block group-hover:block">
+                  <span class=" text-white p-3 bg-dark rounded-full dark:hover:bg-info hover:bg-white hover:text-dark dark:hover:text-white hover:cursor-pointer text-center duration-500 text-xs"><i class="fa-solid fa-cart-plus"></i></span>
+                </div>
+              </div>
+              <!-- product details (name, category, tags, etc...) -->
+              <div class="flex flex-col space-y-3 my-3">
+                <!-- category name -->
+                <span class="text-accent-light text-sm flex flex-row justify-between"><i class="hover:cursor-pointer">category</i><i class="fa-regular fa-share-from-square hover:cursor-pointer hover:text-dark dark:hover:text-white"></i></span>
+                <!-- product info (name, tags) -->
+                <div>
+                  <!-- product name -->
+                  <span class="text-dark dark:text-white text-lg font-extrabold">BOOK NAME 1</span>
+                  <!-- product tags -->
+                  <span class="flex flex-row justify-start text-dark dark:text-light text-xs space-x-1">
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 1</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 2</i>
+                  </span>
+                </div>
+                <!-- product price -->
+                <span class="flex flex-row space-x-2">
+                  <!-- old -->
+                  <i class="text-light self-center line-through text-sm">95 LYD</i>
+                  <!-- new price -->
+                  <i class="text-dark dark:text-white text-lg">60 LYD</i>
+                </span>
+              </div>
+            </div>
+            <!-- product 18 -->
+            <div>
+              <!-- product image and buttons -->
+              <div class="relative group">
+                <figure>
+                  <img src="./img/equips/equips8.webp" alt="" width="800" height="800">
+                </figure>
+                <div class="absolute bottom-0 w-full">
+                  <button class="lg:hidden xs:block group-hover:block bg-dark dark:bg-info text-white w-full p-3 duration-500 opacity-70 hover:opacity-100">view</button>
+                </div>
+                <div class="absolute top-6 right-3 lg:hidden xs:block group-hover:block">
+                  <span class=" text-white p-3 bg-dark rounded-full dark:hover:bg-info hover:bg-white hover:text-dark dark:hover:text-white hover:cursor-pointer text-center duration-500 text-xs"><i class="fa-solid fa-cart-plus"></i></span>
+                </div>
+              </div>
+              <!-- product details (name, category, tags, etc...) -->
+              <div class="flex flex-col space-y-3 my-3">
+                <!-- category name -->
+                <span class="text-accent-light text-sm flex flex-row justify-between"><i class="hover:cursor-pointer">category</i><i class="fa-regular fa-share-from-square hover:cursor-pointer hover:text-dark dark:hover:text-white"></i></span>
+                <!-- product info (name, tags) -->
+                <div>
+                  <!-- product name -->
+                  <span class="text-dark dark:text-white text-lg font-extrabold">BOOK NAME 1</span>
+                  <!-- product tags -->
+                  <span class="flex flex-row justify-start text-dark dark:text-light text-xs space-x-1">
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 1</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 4</i>
+                  </span>
+                </div>
+                <!-- product price -->
+                <span class="flex flex-row space-x-2">
+                  <!-- old -->
+                  <i class="text-light self-center line-through text-sm">95 LYD</i>
+                  <!-- new price -->
+                  <i class="text-dark dark:text-white text-lg">60 LYD</i>
+                </span>
+              </div>
+            </div>
+            <!-- product 19 -->
+            <div>
+              <!-- product image and buttons -->
+              <div class="relative group">
+                <figure>
+                  <img src="./img/equips/equips6.webp" alt="" width="800" height="800">
+                </figure>
+                <div class="absolute bottom-0 w-full">
+                  <button class="lg:hidden xs:block group-hover:block bg-dark dark:bg-info text-white w-full p-3 duration-500 opacity-70 hover:opacity-100">view</button>
+                </div>
+                <div class="absolute top-6 right-3 lg:hidden xs:block group-hover:block">
+                  <span class=" text-white p-3 bg-dark rounded-full dark:hover:bg-info hover:bg-white hover:text-dark dark:hover:text-white hover:cursor-pointer text-center duration-500 text-xs"><i class="fa-solid fa-cart-plus"></i></span>
+                </div>
+              </div>
+              <!-- product details (name, category, tags, etc...) -->
+              <div class="flex flex-col space-y-3 my-3">
+                <!-- category name -->
+                <span class="text-accent-light text-sm flex flex-row justify-between"><i class="hover:cursor-pointer">category</i><i class="fa-regular fa-share-from-square hover:cursor-pointer hover:text-dark dark:hover:text-white"></i></span>
+                <!-- product info (name, tags) -->
+                <div>
+                  <!-- product name -->
+                  <span class="text-dark dark:text-white text-lg font-extrabold">BOOK NAME 1</span>
+                  <!-- product tags -->
+                  <span class="flex flex-row justify-start text-dark dark:text-light text-xs space-x-1">
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 1</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 2</i>
+                  </span>
+                </div>
+                <!-- product price -->
+                <span class="flex flex-row space-x-2">
+                  <!-- old -->
+                  <i class="text-light self-center line-through text-sm">95 LYD</i>
+                  <!-- new price -->
+                  <i class="text-dark dark:text-white text-lg">60 LYD</i>
+                </span>
+              </div>
+            </div>
+            <!-- product 20 -->
+            <div>
+              <!-- product image and buttons -->
+              <div class="relative group">
+                <figure>
+                  <img src="./img/equips/equips11.webp" alt="" width="800" height="800">
+                </figure>
+                <div class="absolute bottom-0 w-full">
+                  <button class="lg:hidden xs:block group-hover:block bg-dark dark:bg-info text-white w-full p-3 duration-500 opacity-70 hover:opacity-100">view</button>
+                </div>
+                <div class="absolute top-6 right-3 lg:hidden xs:block group-hover:block">
+                  <span class=" text-white p-3 bg-dark rounded-full dark:hover:bg-info hover:bg-white hover:text-dark dark:hover:text-white hover:cursor-pointer text-center duration-500 text-xs"><i class="fa-solid fa-cart-plus"></i></span>
+                </div>
+              </div>
+              <!-- product details (name, category, tags, etc...) -->
+              <div class="flex flex-col space-y-3 my-3">
+                <!-- category name -->
+                <span class="text-accent-light text-sm flex flex-row justify-between"><i class="hover:cursor-pointer">category</i><i class="fa-regular fa-share-from-square hover:cursor-pointer hover:text-dark dark:hover:text-white"></i></span>
+                <!-- product info (name, tags) -->
+                <div>
+                  <!-- product name -->
+                  <span class="text-dark dark:text-white text-lg font-extrabold">BOOK NAME 1</span>
+                  <!-- product tags -->
+                  <span class="flex flex-row justify-start text-dark dark:text-light text-xs space-x-1">
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 1</i>
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 2</i>
+                  </span>
+                </div>
+                <!-- product price -->
+                <span class="flex flex-row space-x-2">
+                  <!-- old -->
+                  <i class="text-light self-center line-through text-sm">95 LYD</i>
+                  <!-- new price -->
+                  <i class="text-dark dark:text-white text-lg">60 LYD</i>
+                </span>
+              </div>
+            </div>
+            <!-- product 21 -->
+            <div>
+              <!-- product image and buttons -->
+              <div class="relative group">
+                <figure>
+                  <img src="./img/equips/equips9.webp" alt="" width="800" height="800">
+                </figure>
+                <div class="absolute bottom-0 w-full">
+                  <button class="lg:hidden xs:block group-hover:block bg-dark dark:bg-info text-white w-full p-3 duration-500 opacity-70 hover:opacity-100">view</button>
+                </div>
+                <div class="absolute top-6 right-3 lg:hidden xs:block group-hover:block">
+                  <span class=" text-white p-3 bg-dark rounded-full dark:hover:bg-info hover:bg-white hover:text-dark dark:hover:text-white hover:cursor-pointer text-center duration-500 text-xs"><i class="fa-solid fa-cart-plus"></i></span>
+                </div>
+              </div>
+              <!-- product details (name, category, tags, etc...) -->
+              <div class="flex flex-col space-y-3 my-3">
+                <!-- category name -->
+                <span class="text-accent-light text-sm flex flex-row justify-between"><i class="hover:cursor-pointer">category</i><i class="fa-regular fa-share-from-square hover:cursor-pointer hover:text-dark dark:hover:text-white"></i></span>
+                <!-- product info (name, tags) -->
+                <div>
+                  <!-- product name -->
+                  <span class="text-dark dark:text-white text-lg font-extrabold">BOOK NAME 1</span>
+                  <!-- product tags -->
+                  <span class="flex flex-row justify-start text-dark dark:text-light text-xs space-x-1">
+                    <i class="bg-accent-light dark:bg-white rounded-full p-1 shadow-xl">tag 1</i>
+                  </span>
+                </div>
+                <!-- product price -->
+                <span class="flex flex-row space-x-2">
+                  <!-- old -->
+                  <i class="text-light self-center line-through text-sm">95 LYD</i>
+                  <!-- new price -->
+                  <i class="text-dark dark:text-white text-lg">60 LYD</i>
+                </span>
+              </div>
+            </div>
+            </div>
+            <!-- first col -->
+            <div class="grid lg:col-span-2 sm:col-span-2 dark:bg-secondary p-4 shadow-xl">
+              <!-- product 22 -->
+              <div>
+                <!-- product image and buttons -->
+                <div class="relative group">
+                  <figure>
+                    <img src="./img/equips/equips9.webp" alt="" width="800" height="800">
+                  </figure>
+                  <div class="absolute bottom-0 w-full">
+                    <button class="lg:hidden xs:block group-hover:block bg-dark dark:bg-info text-white w-full p-3 duration-500 opacity-70 hover:opacity-100">view</button>
+                  </div>
+                  <div class="absolute top-6 right-3 lg:hidden xs:block group-hover:block">
+                    <span class=" text-white p-3 bg-dark rounded-full dark:hover:bg-info hover:bg-white hover:text-dark dark:hover:text-white hover:cursor-pointer text-center duration-500 text-xs"><i class="fa-solid fa-cart-plus"></i></span>
+                  </div>
+                </div>
+                <!-- product details (name, category, tags, etc...) -->
+                <div class="flex flex-col space-y-3 my-3">
+                  <!-- category name -->
+                  <span class="text-accent-light text-sm flex flex-row justify-between"><i class="hover:cursor-pointer">category</i><i class="fa-regular fa-share-from-square hover:cursor-pointer hover:text-dark dark:hover:text-white"></i></span>
+                  <!-- product info (name, tags) -->
+                  <div>
+                    <!-- product name -->
+                    <span class="text-dark dark:text-white text-lg font-extrabold">BOOK NAME 1</span>
+                    <!-- product tags -->
+                    <span class="flex flex-row justify-start text-dark dark:text-light text-xs space-x-1">
+                    <i class="bg-accent-light dark:bg-white  p-1">tag 2</i>
+                    <i class="bg-accent-light dark:bg-white  p-1">tag 2</i>
+                    </span>
+                  </div>
+                  <!-- product price -->
+                  <span class="flex flex-row space-x-2">
+                    <!-- old -->
+                    <i class="text-light self-center line-through text-sm">95 LYD</i>
+                    <!-- new price -->
+                    <i class="text-dark dark:text-white text-lg">60 LYD</i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-secondary p-5">
+      <div class="flex flex-row justify-between">
+          <!-- logo and social -->
+        <div class="flex flex-row">
+          <div>
+            <img src="./img/Alkimma_primary_logo_transparent.png" class="w-full max-h-20 my-2" alt="">
+          </div> 
+          <!-- divider -->
+          <div class="w-0.5 h-24 bg-opacity-50 bg-white self-center mr-4"></div>
+          <div class="flex flex-row space-x-3">
+            <span class="border border-1 border-white text-white hover:cursor-pointer hover:bg-white hover:text-dark px-2 py-1 self-center"><i class="fa-brands fa-facebook-f"></i></span>
+            <span class="border border-1 border-white text-white hover:cursor-pointer hover:bg-white hover:text-dark px-2 py-1 self-center"><i class="fa-brands fa-twitter"></i></span>
+            <span class="border border-1 border-white text-white hover:cursor-pointer hover:bg-white hover:text-dark px-2 py-1 self-center"><i class="fa-brands fa-youtube"></i></span>
+            <span class="border border-1 border-white  text-white hover:cursor-pointer hover:bg-white hover:text-dark px-2 py-1 self-center"><i class="fa-brands fa-linkedin-in"></i></span>
+          </div>
+        </div>
+        <!-- payment methods -->
+        <div class="flex flex-row space-x-3">
+          <span class="w-10  h-10 self-center"><img src="./img/idfalee.png" alt="" class="object-contain w-full h-full"></span>
+          <span class="w-10  h-10 self-center"><img src="./img/libyana.png" alt="" class="object-contain w-full h-full"></span>
+          <span class="w-16  h-16 self-center"><img src="./img/cashOnDelivery.png" alt="" class="object-contain w-full h-full"></span>
+        </div>
+      </div>
+    </footer>
+            
+
+
+
+
+
+    <script src="./dist/main.js"></script>
+    <script src=".\node_modules\flowbite\dist\flowbite.js"></script>
+</body>
+</html>
